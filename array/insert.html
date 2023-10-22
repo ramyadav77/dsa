@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert New Element In the Array</title>
+    <script>
+      function Insert() {
+        let data = [60, 30, 90, 50];
+        let newEl = document.getElementById("newEl").value;
+        let position = document.getElementById("position").value;
+        console.log(data);
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newEl;
+            }
+          }
+        }
+        console.log(data)
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="newEl" placeholder="Enter new element" />
+    <input type="text" id="position" placeholder="Enter position" />
+    <button onclick="Insert()">Insert</button>
+  </body>
+</html>
