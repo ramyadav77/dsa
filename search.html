@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <script>
+        function searchitem(){
+            let data=[20,30,40,10,50,60,70,80,90]
+            let item=document.getElementById('item').value;
+            let index=undefined
+            console.log(data)
+            for(let i=0;i<=data.length-1;i++)
+            {
+                if(data[i]==item){
+                    index=i;
+                }
+            }
+            console.log(` given  data item  present on index number:`,index)
+        }
+    
+    </script>
+</head>
+<body>
+    <input type="text" id="item" placeholder="search iten here">
+    <button onclick="searchitem()">search</button>
+</body>
+</html>
